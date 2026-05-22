@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>The Broadway Group Society for Care and Housing · Vancouver</title>
+<meta content="The Broadway Group Society for Care and Housing – community-rooted nonprofit providing care and housing in Vancouver's Downtown Eastside since our founding." name="description"/>
+<meta content="The Broadway Group Society for Care and Housing" property="og:title"/>
+<meta content="Care and housing in the heart of Vancouver. Serving the Downtown Eastside with support, shelter, and community programs." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="The Broadway Group Society for Care and Housing" name="twitter:title"/>
+<meta content="Care and housing in the heart of Vancouver. Serving the Downtown Eastside." name="twitter:description"/>
+<meta content="https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #2C3E50;
+      --secondary: #E67E22;
+      --accent: #F1C40F;
+      --text: #2C3E50;
+      --background: #FDF6E3;
+      --muted: #F4E8C1;
+      --paper-shadow: rgba(44, 62, 80, 0.06);
+      --font-heading: 'Merriweather', Georgia, serif;
+      --font-body: 'Open Sans', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--background);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBudW1PY3RhdmVzPSI0IiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMC4wNCIgLz48L3N2Zz4=');
+      font-family: var(--font-body);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    
+    .identity-bar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(253, 246, 227, 0.92);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid var(--muted);
+      padding: 0.75rem 0;
+    }
+    .identity-bar .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .org-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+    .org-name small {
+      font-weight: 400;
+      font-size: 0.75rem;
+      display: block;
+      color: var(--secondary);
+      letter-spacing: 0.3px;
+    }
+    
+    .proof-strip {
+      background: var(--muted);
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(44,62,80,0.08);
+    }
+    .proof-strip .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      align-items: baseline;
+      font-size: 0.85rem;
+    }
+    .proof-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .proof-strip a {
+      color: var(--secondary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+    .proof-strip a:hover { color: var(--primary); }
+    
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 3rem 0 4rem;
+      background: var(--primary);
+      margin-bottom: 2.5rem;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: none no-repeat center bottom / cover;
+      opacity: 0.55;
+      mix-blend-mode: luminosity;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(44,62,80,0.85) 0%, rgba(44,62,80,0.4) 70%, transparent 100%);
+    }
+    .hero .wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .hero-text {
+      max-width: 680px;
+      background: rgba(253, 246, 227, 0.92);
+      padding: 2rem 2.2rem;
+      border-radius: 0 24px 24px 0;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(2px);
+    }
+    .hero-text h1 {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      max-width: 550px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.7rem 1.6rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .btn:hover {
+      background: #c96f1a;
+      box-shadow: 0 6px 14px rgba(230,126,34,0.25);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    
+    section { padding: 3.5rem 0; }
+    .section-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1.75rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
+      margin-top: 0.4rem;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 700px) {
+      .about-grid { grid-template-columns: 1fr 1.2fr; }
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .about-text ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .about-text li {
+      padding: 0.4rem 0 0.4rem 1.8rem;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23E67E22"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>') left center no-repeat;
+      background-size: 1.1rem;
+    }
+    .about-collage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      align-content: start;
+    }
+    .about-collage img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px var(--paper-shadow);
+      transition: transform 0.2s;
+    }
+    .about-collage img:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 3; height: 100%; }
+    .about-collage img:nth-child(2) { grid-column: 2 / 3; }
+    .about-collage img:nth-child(3) { grid-column: 2 / 3; }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .service-card {
+      background: #fff;
+      padding: 1.8rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px var(--paper-shadow);
+      border: 1px solid rgba(44,62,80,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 10px 24px rgba(44,62,80,0.08); }
+    .service-icon {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      background: var(--muted);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+    }
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    .service-card p { font-size: 0.95rem; color: #3a4a5a; }
+    
+    .scroll-community {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scroll-community::-webkit-scrollbar { height: 6px; }
+    .scroll-community::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+    .community-panel {
+      flex: 0 0 80%;
+      max-width: 340px;
+      scroll-snap-align: start;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px var(--paper-shadow);
+      transition: transform 0.2s;
+    }
+    @media (min-width: 700px) {
+      .community-panel { flex: 0 0 30%; }
+    }
+    .community-panel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .community-panel .panel-text {
+      padding: 1.2rem 1rem 1.5rem;
+    }
+    .community-panel h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .community-panel p {
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+    
+    .contact-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 700px) {
+      .contact-split { grid-template-columns: 1fr 1.2fr; }
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #d4c9b0;
+      border-radius: 30px;
+      font-family: var(--font-body);
+      background: #fff;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover { background: #1f2d3a; }
+    .map-details {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 24px;
+      box-shadow: 0 6px 16px var(--paper-shadow);
+    }
+    .map-details img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      filter: sepia(0.2) contrast(1.05);
+    }
+    .map-details p { margin-bottom: 0.3rem; font-size: 0.95rem; }
+    .map-details a { color: var(--secondary); text-decoration: underline; }
+    
+    footer {
+      border-top: 1px solid var(--muted);
+      padding: 2rem 0 1.5rem;
+      font-size: 0.85rem;
+      color: #4a5a6a;
+    }
+    footer .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    footer a { color: var(--secondary); text-decoration: underline; }
+    footer .photo-credit { opacity: 0.8; }
+    
+    .text-small { font-size: 0.9rem; }
+    .mt-2 { margin-top: 1.5rem; }
+    .mb-1 { margin-bottom: 0.75rem; }
+    .inline-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+    .inline-list dt { font-weight: 600; }
+    .inline-list dd { margin-left: 0; }
+    @media (max-width: 480px) {
+      .hero-text { padding: 1.5rem; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<header class="identity-bar">
+<div class="wrapper">
+<div class="org-name">
+        The Broadway Group Society<br/><small>for Care and Housing</small>
+</div>
+<div style="font-size:0.8rem; color:var(--secondary); letter-spacing:0.3px;">Vancouver, BC</div>
+</div>
+</header>
+<div class="proof-strip">
+<div class="wrapper">
+<span>📍 Vancouver's Downtown Eastside &amp; surrounding areas</span>
+<span>🏛️ Nonprofit · Care &amp; Housing</span>
+<span><a href="https://thebroadwaygroup.ca" rel="noopener" target="_blank">thebroadwaygroup.ca</a></span>
+</div>
+</div>
+<section class="hero" id="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="wrapper">
+<div class="hero-text">
+<h1>Care and Housing<br/>in the Heart of Vancouver</h1>
+<p>The Broadway Group Society has served the Downtown Eastside since our founding, offering support and shelter.</p>
+<div class="hero-actions">
+<a class="btn" href="#about">Read the summary</a>
+<a class="btn btn-outline" href="https://thebroadwaygroup.ca" rel="noopener" target="_blank">Check source record</a>
+</div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="wrapper">
+<h2 class="section-title">About · Field Notes</h2>
+<div class="about-grid">
+<div class="about-text">
+<p>The Broadway Group Society for Care and Housing is a nonprofit based in Vancouver, BC, dedicated to providing care and housing to our community. Located at 245 Powell St, we have been a steady presence in the Downtown Eastside, offering programs that support dignity and stability.</p>
+<ul>
+<li>Rooted in Vancouver's Downtown Eastside for years.</li>
+<li>Focus on both care and housing as interconnected needs.</li>
+<li>Community-driven approach with local volunteers.</li>
+</ul>
+<p class="text-small" style="color:#4a5a6a;"><strong>Service area:</strong> Vancouver's Downtown Eastside and surrounding areas.</p>
+</div>
+<div class="about-collage">
+<img alt="Community garden volunteers" height="800" loading="lazy" src="https://images.pexels.com/photos/8543117/pexels-photo-8543117.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Row houses Vancouver" height="800" loading="lazy" src="https://images.pexels.com/photos/5505129/pexels-photo-5505129.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Neighborhood mural" height="800" loading="lazy" src="https://images.pexels.com/photos/13425278/pexels-photo-13425278.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</div>
+</section>
+<section id="programs" style="background: var(--muted);">
+<div class="wrapper">
+<h2 class="section-title">Programs &amp; Support</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">🏠</div>
+<h3>Supportive Housing</h3>
+<p>Safe, affordable housing with on-site support for individuals in need.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🌱</div>
+<h3>Community Programs</h3>
+<p>Workshops, meals, and social activities that foster connection.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🤝</div>
+<h3>Volunteer Opportunities</h3>
+<p>Join our team to help with daily operations and community events.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">❤️</div>
+<h3>Donate</h3>
+<p>Your contributions help us maintain and expand our services.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="volunteer-donate">
+<div class="wrapper">
+<h2 class="section-title">Volunteer &amp; Donate</h2>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1rem;">
+<div style="background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 6px 16px var(--paper-shadow);">
+<img alt="Volunteer sorting donations" src="https://images.pexels.com/photos/7156172/pexels-photo-7156172.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" style="width:100%; height:200px; object-fit:cover; display:block;"/>
+<div style="padding:1rem 1.2rem 1.5rem;">
+<h3 style="font-family:var(--font-heading); font-weight:700;">Volunteer</h3>
+<p style="font-size:0.95rem;">Help with daily operations, community meals, and garden care.</p>
+</div>
+</div>
+<div style="background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 6px 16px var(--paper-shadow);">
+<img alt="Donation jar" src="https://images.pexels.com/photos/9929281/pexels-photo-9929281.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" style="width:100%; height:200px; object-fit:cover; display:block;"/>
+<div style="padding:1rem 1.2rem 1.5rem;">
+<h3 style="font-family:var(--font-heading); font-weight:700;">Donate</h3>
+<p style="font-size:0.95rem;">Every gift supports housing, meals, and programs in the DTES.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="community-stories" style="background: var(--muted);">
+<div class="wrapper">
+<h2 class="section-title">Community Stories</h2>
+<div class="scroll-community">
+<div class="community-panel">
+<img alt="Person walking dog in park" height="800" loading="lazy" src="https://images.pexels.com/photos/34587707/pexels-photo-34587707.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="panel-text">
+<h4>Neighbourhood walks</h4>
+<p>Daily connections that build a safer, kinder Eastside.</p>
+</div>
+</div>
+<div class="community-panel">
+<img alt="Sunset over Vancouver" height="800" loading="lazy" src="https://images.pexels.com/photos/18604163/pexels-photo-18604163.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="panel-text">
+<h4>Evening light over the city</h4>
+<p>Our community shares these skies, every day.</p>
+</div>
+</div>
+<div class="community-panel">
+<img alt="People chatting over coffee" height="800" loading="lazy" src="https://images.pexels.com/photos/6647033/pexels-photo-6647033.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="panel-text">
+<h4>Drop-in conversations</h4>
+<p>Warm spaces where everyone is welcome.</p>
+</div>
+</div>
+<div class="community-panel">
+<img alt="Community outdoor meal" height="800" loading="lazy" src="https://images.pexels.com/photos/36266152/pexels-photo-36266152.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="panel-text">
+<h4>Shared meals</h4>
+<p>Long tables, good food, stronger bonds.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="wrapper">
+<h2 class="section-title">Contact &amp; Visit</h2>
+<div class="contact-split">
+<div>
+<form action="mailto:info@thebroadwaygroup.ca" class="contact-form" enctype="text/plain" method="post">
+<input name="name" placeholder="Your name" required="" type="text"/>
+<input name="email" placeholder="Email address" required="" type="email"/>
+<textarea name="message" placeholder="Tell us about your interest — programs, donations, volunteering, or general contact."></textarea>
+<button type="submit">Send message</button>
+<p style="font-size:0.8rem; margin-top:0.5rem;">We'll reply within 2 business days.</p>
+</form>
+<div style="background:#fff; padding:1.2rem 1.5rem; border-radius:20px; margin-top:1.5rem; box-shadow:0 4px 12px var(--paper-shadow);">
+<h3 style="font-family:var(--font-heading); font-size:1rem; margin-bottom:0.5rem;">What happens next?</h3>
+<ul style="list-style:disc; padding-left:1.2rem; font-size:0.9rem;">
+<li>You reach out via form, phone, or in person.</li>
+<li>We listen to your interest — programs, donations, volunteering, or general contact.</li>
+<li>We confirm the best next step together.</li>
+</ul>
+</div>
+</div>
+<div class="map-details">
+<img alt="Lantern-lit street" src="https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" style="filter:sepia(0.3) contrast(1.1);"/>
+<p><strong>The Broadway Group Society</strong><br/>245 POWELL ST<br/>VANCOUVER, BC</p>
+<p><a href="tel:+16047331441">(604) 733-1441</a></p>
+<p style="margin-top:0.5rem; font-size:0.9rem;">Drop by or call — we're here.</p>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="wrapper">
+<div>
+<span>© <span id="year"></span> The Broadway Group Society for Care and Housing</span><br/>
+<span>245 POWELL ST, VANCOUVER, BC</span><br/>
+<span><a href="tel:+16047331441">(604) 733-1441</a></span>
+</div>
+<div class="photo-credit">
+        Photos by <a href="https://www.pexels.com/photo/illuminated-buildings-at-night-11557792/" target="_blank">Maximilian Ruther</a>, 
+        <a href="https://www.pexels.com/photo/a-man-and-woman-holding-potted-plants-8543117/" target="_blank">Mikhail Nilov</a>, 
+        <a href="https://www.pexels.com/photo/people-chatting-while-having-coffee-6647033/" target="_blank">RDNE Stock project</a>, 
+        <a href="https://www.pexels.com/photo/large-community-outdoor-gathering-banquet-36266152/" target="_blank">VOLKAN KARAGULLEOGLU</a>, 
+        <a href="https://www.pexels.com/photo/male-volunteer-doing-an-inventory-7156172/" target="_blank">Gustavo Fring</a>, 
+        <a href="https://www.pexels.com/photo/person-holding-a-jar-9929281/" target="_blank">Towfiqu barbhuiya</a>, 
+        <a href="https://www.pexels.com/photo/design-of-buildings-5505129/" target="_blank">Mike van Schoonderwalt</a>, 
+        <a href="https://www.pexels.com/photo/a-wall-with-graffiti-by-the-road-13425278/" target="_blank">Malcolm Garret</a>, 
+        <a href="https://www.pexels.com/photo/person-walking-dog-in-sunlit-park-near-buildings-34587707/" target="_blank">Jonathan Cooper</a>, 
+        <a href="https://www.pexels.com/photo/a-colorful-sunset-over-the-city-of-vancouver-18604163/" target="_blank">Adi K</a> 
+        · <a href="https://thebroadwaygroup.ca" target="_blank">Source record</a>
+</div>
+</div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
